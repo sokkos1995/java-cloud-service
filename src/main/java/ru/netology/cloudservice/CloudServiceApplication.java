@@ -1,0 +1,13 @@
+package ru.netology.cloudservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+@SpringBootApplication
+@ConfigurationPropertiesScan(basePackages = "ru.netology.cloudservice.config")
+public class CloudServiceApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(CloudServiceApplication.class, args);
+    }
+}
