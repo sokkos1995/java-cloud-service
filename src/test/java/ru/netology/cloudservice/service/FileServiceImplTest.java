@@ -90,7 +90,6 @@ class FileServiceImplTest {
         MultipartFile mockFile = mock(MultipartFile.class);
         when(mockFile.getSize()).thenReturn(100L);
         when(mockFile.getContentType()).thenReturn("text/plain");
-        when(mockFile.getInputStream()).thenReturn(new java.io.ByteArrayInputStream("content".getBytes()));
 
         when(userRepository.findByLogin("user")).thenReturn(Optional.of(testUser));
         when(fileRepository.findByUserAndFilename(testUser, "doc.txt")).thenReturn(Optional.empty());
